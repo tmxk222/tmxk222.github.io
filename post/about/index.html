@@ -1,91 +1,142 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<!-- 必要参数 -->
-<meta charset="utf-8"/>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
 <title>关于 | tong</title>
-<meta name="keywords" content="关键词"/>
-<meta name="description" content="简述"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:no"/>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<link rel="shortcut icon" href="favicon.ico">
-<!-- CSS -->
-<link rel="stylesheet" href="https://tmxk222.github.io/media/css/mdui.min.css">
-<link rel="stylesheet" href="https://tmxk222.github.io/media/css/modify.css">
-<link rel="stylesheet" href="https://tmxk222.github.io/media/css/github-gist.min.css">
-<link rel="stylesheet" href="https://tmxk222.github.io/media/css/railscasts.min.css">
-</head>
-<body id="post" class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-theme-layout-dark">
-<header role="banner">
-    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-shadow-0">
-        <div class="mdui-toolbar">
-            <button class="mdui-btn mdui-btn-icon" id="menu" mdui-drawer="{target:'#drawer',overlay:true,swipe:true}"><i class="mdui-icon material-icons">menu</i></button>
-            <a href="https://tmxk222.github.io" class="mdui-typo-headline">tong</a>
-            <div class="mdui-toolbar-spacer"></div>
-            <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '深色样式切换', position: 'left'}" id="DarkStyle"><i class="mdui-icon material-icons">brightness_4</i></button>
-        </div>
+<meta name="description" content="python">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://tmxk222.github.io/favicon.ico?v=1638329537984">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tmxk222.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://tmxk222.github.io">
+        <img class="avatar" src="https://tmxk222.github.io/images/avatar.png?v=1638329537984" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://tmxk222.github.io">
+        <h1 class="site-title">tong</h1>
+      </a>
     </div>
-</header>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
 
-<nav id="drawer" class="mdui-drawer mdui-drawer-full-height mdui-drawer-close">
-    <ul class="mdui-list">
-        <a href="/" class="menu"><li class="mdui-list-item mdui-ripple">首页</li></a>
-        <a href="/archives" class="menu"><li class="mdui-list-item mdui-ripple">归档</li></a>
-        <a href="/tags" class="menu"><li class="mdui-list-item mdui-ripple">标签</li></a>
-        <a href="/post/about" class="menu"><li class="mdui-list-item mdui-ripple">关于</li></a>
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
         
-        <a href="https://github.com/CPlayer-CN/gridea-theme-cplayer-material" class="spread"><li class="mdui-list-item mdui-ripple">主题主页</li></a>
-    </ul>
-</nav>
-
-
-<main class="mdui-container mdui-typo mdui-m-t-2">
-    <section class="mdui-card">
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
         
-        <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">关于</div>
-            <div class="mdui-card-primary-subtitle">发布于 2019-01-25，包含标签 。</div>
-        </div>
-        <div class="mdui-card-content"><blockquote>
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">关于</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-01-25</span>
+            
+          </div>
+          <div class="post-content">
+            <blockquote>
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
 <h2 id="博主是谁">👨‍💻 博主是谁</h2>
 <h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
 <h2 id="联系我呀">📬 联系我呀</h2>
-</div>
-        <div class="mdui-card-header">
-            <img class="mdui-card-header-avatar" src="https://tmxk222.github.io/images/avatar.png">
-            <div class="mdui-card-header-title">tong</div>
-            <div class="mdui-card-header-subtitle">python</div>
+
+          </div>
         </div>
-    </section>
+
+        
+      </div>
 
       
-</main>
 
-<nav class="mdui-container mdui-m-t-2 mdui-m-b-2">
+      <div class="site-footer">
+  <div class="slogan">python</div>
+  <div class="social-container">
     
+      
     
-</nav>
-
-<div class="mdui-m-t-2 mdui-text-center mdui-typo">
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://tmxk222.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-<script src="https://tmxk222.github.io/media/js/jquery.min.js"></script>
-<script src="https://tmxk222.github.io/media/js/mdui.min.js"></script>
-<script src="https://tmxk222.github.io/media/js/modify.js"></script>
-<script src="https://tmxk222.github.io/media/js/highlight.min.js"></script>
-<script src="https://tmxk222.github.io/media/js/lightense.min.js"></script>
-<script>
-// 初始化-高亮代码
-hljs.initHighlightingOnLoad();
-// 初始化-文章图片放大
-window.addEventListener('load', function () {
-    Lightense('#post .mdui-card-content img');
-}, false);
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-</body>
+
+
+
+  </body>
 </html>
