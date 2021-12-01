@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tmxk222.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-12-01T02:51:21.066Z</updated>
+    <title>tong</title>
+    <updated>2021-12-01T02:54:41.780Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tmxk222.github.io"/>
     <link rel="self" href="https://tmxk222.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>python</subtitle>
     <logo>https://tmxk222.github.io/images/avatar.png</logo>
     <icon>https://tmxk222.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, tong</rights>
     <entry>
         <title type="html"><![CDATA[你是谁]]></title>
         <id>https://tmxk222.github.io/post/ni-shi-shui/</id>
